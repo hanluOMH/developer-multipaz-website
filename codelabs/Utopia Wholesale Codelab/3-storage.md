@@ -202,10 +202,10 @@ Now the credentials exist in your documents, however, they won't be accessible t
 
 ```kotlin
 if (DigitalCredentials.Default.available) {  
-*//TODO:  DigitalCredentials.Default.startExportingCredentials(*  
-*//                    documentStore = documentStore,*  
-*//                    documentTypeRepository = documentTypeRepository*  
-*//                )*
+//TODO:  DigitalCredentials.Default.startExportingCredentials(
+//                    documentStore = documentStore,
+//                    documentTypeRepository = documentTypeRepository*  
+//                )
 
    DigitalCredentials.Default.startExportingCredentials(  
        documentStore = documentStore,  
