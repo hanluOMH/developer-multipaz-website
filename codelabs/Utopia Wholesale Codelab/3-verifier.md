@@ -56,16 +56,10 @@ This will generate:
 - `iaca_certificate.pem` — used by the Verifier (contains the public key)
 - `iaca_private_key.pem` — private key
 
-### Step 3: Generate Public Key from Private Key
 
-Use below command line to generate public key
-
-```bash
-openssl pkey -in iaca_private_key.pem -pubout -out iaca_public_key.pem
-```
 
 ---
 
 ### 🔗 Usage in the Holder App
 
-The content of following files `iaca_public_key.pem`,`iaca_private_key.pem`and `iaca_certificate.pem` are used in  [`App.kt`](https://github.com/openmobilehub/multipaz-utopia-wholesale-codelab/blob/main/composeApp/src/commonMain/kotlin/org/multipaz/samples/wallet/cmp/App.kt):
+The content of following files `iaca_private_key.pem`and `iaca_certificate.pem` are used in  [`App.kt`](https://github.com/openmobilehub/multipaz-utopia-wholesale-codelab/blob/main/composeApp/src/commonMain/kotlin/org/multipaz/samples/wallet/cmp/App.kt):
