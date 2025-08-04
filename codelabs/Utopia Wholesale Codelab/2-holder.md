@@ -218,6 +218,26 @@ if (DigitalCredentials.Default.available) {
 }
 
 ```
+
+
+### **Step 6: Add Verifier Certificate**
+
+
+The Holder app also needs to add the Verifier (Reader) certificate to its trust list. This ensures that the Holder can recognize and trust the Verifier during credential sharing. The Verifier's certificate can be downloaded from the Multipaz Verifier [website](https://verifier.multipaz.org/identityreaderbackend/). Below is the code snippet demonstrating how to add the Verifier's certificate to the trust list:
+```
+   addTrustPoint(
+                    TrustPoint(
+                        certificate = X509Cert.fromPem(
+                            getReader_Root_Cert().trimIndent().trim() # Verifier's cert
+                        ),
+                        displayName = "OWF Multipaz TestApp",
+                        displayIcon = null,
+                        privacyPolicyUrl = "https://apps.multipaz.org"
+                    )
+                )
+
+```
+
 ---
 
 # How to Generate a Certificate (Optional)
