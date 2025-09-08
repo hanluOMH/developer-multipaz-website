@@ -3,7 +3,7 @@ title: 🆔 Creation of an mDoc
 sidebar_position: 3
 ---
 
-After initializing your `DocumentStore` and related components, you can proceed to create an mDoc (mobile Document) credential. This section guides you through creating a Document and generating a standards-compliant mDoc credential.
+After initializing your `DocumentStore` and related components, you can proceed to create an mDoc (mobile Document) credential. This section guides you through creating a Document and generating a standards-compliant mDoc credential. The following code should go into the `suspend fun init()` in `App.kt`.
 
 ### Creating a Document
 
@@ -49,6 +49,8 @@ val iacaCert = MdocUtil.generateIacaCertificate(
    crlUrl = "https://issuer.example.com/crl"
 )
 ```
+
+We are currently generating a random IACA certificate. You can use `multipazctl` to generate your own certificates & keys. Refer [here](https://github.com/openwallet-foundation-labs/identity-credential/?tab=readme-ov-file#command-line-tool) for the steps.
 
 #### 3. Generate Document Signing (DS) Certificate
 
